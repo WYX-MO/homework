@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>游戏入口</title>
+  <style>
+    body {
+      background-color: #02251a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+  .top-image-container {
+      width: 80%;
+      height: 200px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease;
+      animation: slideImage 5s linear infinite;
+    }
+
+    @keyframes slideImage {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    textarea {
+      width: 80%;
+      height: 150px;
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #045b40;
+      color: #fff;
+      font-size: 16px;
+      resize: none;
+    }
+
+    button {
+      width: 200px;
+      height: 50px;
+      background: linear-gradient(to right, rgb(2, 93, 111), rgb(31, 45, 45));
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, rgb(31, 45, 45), rgb(2, 93, 111));
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-image-container">
+    <img src="../image/long.jpg" alt="游戏图片">
+  </div>
+
+
+  <textarea placeholder="墨守成规原指墨家守城时的利害，形成了一套体系。后世的人想要守城，只要按照这套体系，便可使城池固若金汤。现在请你加入墨家，协助墨子一同守城吧！如果加载不出,请在文件夹中打开.此处可留言～
+  "></textarea>
+
+
+  <button onclick="window.location.href='./mos.html'" >开始游戏</button>
+
+</body>
+
+</html>

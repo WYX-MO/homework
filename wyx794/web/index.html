@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>wyx</title> 
+<style>
+        img
+    {
+    opacity:0.4;
+    filter:alpha(opacity=40); /*  IE8 及其更早版本 */
+    }
+    img:hover
+    {
+    opacity:1.0;
+    filter:alpha(opacity=100); /* IE8 及其更早版本 */
+    }
+    div.img {
+        border: 1px solid #ccc;
+    }
+    
+    div.img:hover {
+        border: 1px solid #777;
+    }
+    
+    div.img img {
+        width: 100%;
+        height: auto;
+    }
+    
+    div.desc {
+        padding: 15px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 1.7em;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 24.99999%;
+    }
+    
+    @media only screen and (max-width: 700px){
+        .responsive {
+            width: 49.99999%;
+            margin: 6px 0;
+        }
+    }
+    
+    @media only screen and (max-width: 500px){
+        .responsive {
+            width: 100%;
+        }
+    }
+    
+    .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #222729;
+    }
+    
+    li a {
+        display: block;
+        color: #6f9097;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    
+    /* 鼠标移动到选项上修改背景颜色 */
+    li a:hover {
+        background: linear-gradient(to right,rgb(2, 93, 111) ,rgb(31, 45, 45));
+        color: rgb(0, 0, 0);
+    }
+    #myImage {
+            height: auto; /* 高度根据宽度自动调整，保持图片原始比例 */
+            transition: all 0.5s ease; /* 设置过渡效果，所有属性变化在0.5秒内以平滑方式完成 */
+        }
+       
+        
+.sliding-text {
+     animation: slide 3s ease - in - out;
+ }
+
+ .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 1200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* 定位 */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+
+
+    </style>
+     <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          // 图片相关交互逻辑
+          var image = document.getElementById("myImage");
+          if (image) {
+              image.addEventListener('mouseover', function () {
+                  // 当鼠标悬停在图片上时，设置新的宽度，这里将宽度放大到300px
+                  this.width = 300;
+              });
+
+              image.addEventListener('mouseout', function () {
+                  // 当鼠标移出图片时，恢复图片的初始宽度
+                  this.width = 200;
+              });
+          }
+
+          // 文本颜色变化逻辑
+          var textElement = document.getElementById('color-changing-text');
+          if (textElement) {
+              var colors = ['#2e3738bc', 'red', 'white'];
+              var colorIndex = 0;
+              setInterval(function () {
+                  textElement.style.color = colors[colorIndex];
+                  colorIndex = (colorIndex + 1) % colors.length;
+              }, 1000);
+          }
+      });
+  </script>
+<!--<link rel="stylesheet" type="text/css" href="Css.css">-->
+</head>
+
+<body style="background-image:url('../image/bk.jpg'); background-size:100% 1300px;">
+    <div style="
+text-align: center;background-color: #222729;background-size:80% 80px;;
+
+padding:17px;
+font-size: 12px;
+">
+<audio src="../image/bgm.mp3" controls autoplay loop></audio>
+<p id="color-changing-text">墨子之道德，非孔老所敢窥视</p>
+</div>
+    <div style="text-align: left; ">
+        <ul>
+        <li><a href="./index.html">主页</a></li>
+        <li><a href="https://baike.baidu.com/item/%E5%A2%A8%E5%AD%90/245">背景</a></li>
+        <li><a href="https://wx.mail.qq.com/?cancel_login=true&from=get_ticket_fail">联系我1739645729@qq.com</a></li>
+        <li><a href="./wyx.html">关于作者</a></li>
+        </ul>      
+    </div>
+    
+
+
+    
+    <p  style="margin-top: -100px;font-family:华文行楷;font-size:9em;text-align: center;color:rgb(6, 44, 32) ;">墨子</p>
+<h2 style="margin-top: -130px;font-family:华文行楷;font-size:2em;text-align: center;color:rgb(255, 255, 255) ;">翻 看 竹 简</h2>
+<p style="text-align: center;font-size: 1.3em;color: #ffffffbc;">穿越千年,讓我們走近這樣一位聖賢,探求埋藏多年的~</p>
+<p style="font-family:华文行楷;text-align: center;font-size: 2em;color: #b84d4dbc;">守 道</p>
+
+<div style="color: #a30707;font-size: 2em;" class="tooltip">觀名人如何評價墨子
+  <span class="tooltiptext">毛泽东：
+    墨子是一个劳动者，他不做官，但他是比孔子高明的圣人，是古代辩证唯物论大家。
+    鲁迅：
+    墨子是中国的脊梁，传奇式的伟大英雄。
+    陈独秀：
+    假若墨子不绝，汉以来的历史绝不会如此。
+    蔡尚思：
+    中国出了一墨子，是最值得中国人骄傲的。
+    季羡林：
+    墨子在人类文明史上，代表了一个时代的高度。他在哲学，教肓，科学，逻辑，军事防御工程等许多领域，都有杰出的贡献，是一位伟大的平民圣人。
+    蔡和森：
+    列宁在苏俄实行的与墨子理论近似。
+    张申府：
+    周季墨家，乃是当时最前进，最革命的学派。
+    蔡元培：
+    墨学中断使中国科学不得发达。
+    章太炎：
+    墨子之道德，非孔老所敢窥视。——孔儒道德，假大空！
+    梁启超：
+    墨子之道，摩顶放踵以利天下，欲救今日之中国，舍墨学之忍苦痛何以哉？墨学之轻生何以哉？
+    吾尝谛观思惟，则墨学精神，深入人心，至今不附，因以形成吾民族特性之一者，盖有之矣。
+    墨子是劳动人民的大圣人。
+    从别方面说，墨子又是个大马克思。
+    杨向奎：
+    一部墨经无论在自然科学哪一方面，都超过整个希腊，至少等于整个希腊。
+    蔡元培：
+    先秦唯墨子颇治科学，假使今日中国有墨子，则中国可救，墨子也许是中国出现过的最伟大人物。
+    </span>
+</div>
+
+<div style="text-align: right; ">
+  
+    <img   id="myImage" style="margin-right: 30px; margin-top: -200px;text-align: center; " width="250" height="290" src="../image/mozi.webp" alt="墨子">
+</div>
+
+<p></p>
+
+
+<div class="responsive">
+  <div class="img">
+    <a href="./ys.html" >
+      <img  src="../image/mg1.jpg" alt="Trolltunga Norway" width="300" height="200">
+    </a>
+    <div class="desc">墨子一生</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="img">
+    <a href="./sc.html">
+      <img  src="../image/sc1.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">墨子說楚</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a href="./kx.html">
+      <img  src="../image/xk.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">科學先驅</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a href="./ms.html">
+      <img   src="../image/yt.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">墨守成規</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+
+<div style="
+background-image:url('../image/long.jpg');background-size:100% 100px;margin-right: -20px;
+text-align: center;
+padding:40px;
+font-size: 12px;
+">
+
+<p style="color: #6f9097;font-size: 1.5em;">wyx的網站 @mozi</p>
+<a href="https://www.acfun.cn/v/ac24519842" style ="
+text-decoration: none;
+ color: #ba0000 ;
+ font-size: 1.5em;
+ ">=請勿點擊=</a>
+</div>
+</body>
+</html>

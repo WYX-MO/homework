@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wyx</title>
+  <style>
+
+    img {
+      opacity: 1.0;
+      filter: alpha(opacity=100);
+
+      transition: all 0.5s ease;
+
+    }
+
+    img:hover {
+      opacity: 1.0;
+      filter: alpha(opacity=100);
+    }
+
+    div.img {
+      border: 1px solid #ccc;
+    }
+
+    div.img:hover {
+      border: 1px solid #777;
+    }
+
+    div.img img {
+      width: 100%;
+      height: auto;
+    }
+
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+      color: #ffffff;
+      font-size: 1.7em;
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+   .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+
+    @media only screen and (max-width: 700px) {
+     .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+     .responsive {
+        width: 100%;
+      }
+    }
+
+
+   .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 200px;
+      background-color: #222729;
+    }
+
+    li a {
+      display: block;
+      color: #6f9097;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background 0.3s ease, color 0.3s ease;
+
+    }
+
+    li a:hover {
+      background: linear-gradient(to right, rgb(2, 93, 111), rgb(31, 45, 45));
+      color: rgb(0, 0, 0);
+    }
+
+
+    #myImage {
+      height: auto;
+
+      transition: all 0.5s ease;
+      animation: fadeInOut 5s infinite;
+
+    }
+
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+   .sliding-text {
+      animation: slide 3s ease-in-out;
+    }
+
+   .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+    }
+
+   .tooltip.tooltiptext {
+      visibility: hidden;
+      width: 1200px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+
+      position: absolute;
+      z-index: 1;
+    }
+
+   .tooltip:hover.tooltiptext {
+      visibility: visible;
+    }
+
+    p {
+      animation: textColorChange 10s infinite;
+
+    }
+
+    @keyframes textColorChange {
+      0% {
+        color: #e46e05;
+      }
+
+      33% {
+        color: #c60303;
+      }
+
+      66% {
+        color: #e7fff2;
+      }
+
+      100% {
+        color: #e46e05;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var image = document.getElementById("myImage");
+      if (image) {
+        image.addEventListener('mouseover', function () {
+
+          this.width = 300;
+        });
+        image.addEventListener('mouseout', function () {
+
+          this.width = 200;
+        });
+      }
+
+    });
+  </script>
+</head>
+
+<body style="background-color: #02251a;">
+  <!-- 背景音乐 -->
+  <audio src="../image/bgm.mp3" controls autoplay loop></audio>
+
+  <div style="text-align: left; ">
+    <ul>
+      <li><a href="./index.html">主页</a></li>
+      <li><a href="#news">背景</a></li>
+      <li><a href="#contact">联系我</a></li>
+      <li><a href="#about">关于作者</a></li>
+    </ul>
+  </div>
+
+  <div style="
+    background-color: #042a1e;
+    text-align: center;
+    padding: 40px;
+    ">
+    <img src="../image/mg2.jpg" alt="我" id="myImage" width="290px" height="200px">
+  </div>
+
+  <div style="
+background-color: #045b40;
+max-width: 700px;
+margin: 30px auto;
+padding: 15px;
+line-height: 1.7;
+">
+    <p>墨翟</p>
+    <p>這個男人強到令人可怕!</p>
+    <p>约公元前 480 年 - 前 476 年
+      出生于春秋末期战国初期，关于其出生地有多种说法，一说为宋国人，是宋国贵族目夷的后裔；一说为鲁国人；还有一说为楚国鲁阳人.
+      早年求学与思想形成
+      早年多在鲁国生活，曾学习儒家学说，对《诗》《尚书》《春秋》等经典熟悉，但后来厌倦儒家烦琐的礼制，开始选择吸收不同于儒学的异域文化，逐渐形成自己的墨家学说.
+      创立墨家学派
+      墨子在批判吸收儒家思想等基础上，创立了墨家学派，其学说以 “十论” 即尚贤、尚同、节用、节葬、非命、非乐、天志、明鬼、兼爱、非攻为主体，强调 “兴天下之利，除天下之害”.
+      游历各国与政治实践
+      止楚攻宋：公元前 440 年左右，得知楚国大匠公输般为楚国造云梯准备攻打宋国，墨子从鲁国出发，日夜兼程十日十夜赶到楚国国都郢都，通过与公电子般和楚王的辩论以及模拟攻防演练，成功说服楚王取消攻打宋国的计划.
+      游历多国：墨子还曾到齐、卫等国游历，宣扬自己的学说。如曾游说齐国不要攻打鲁国，派弟子胜绰到齐将项子牛手下做事以阻止齐伐鲁，并亲自游说项子牛；在游齐之后重游楚国时，客居楚国鲁阳，多次向鲁阳文君宣扬 “非攻” 思想，三劝鲁阳文君放弃攻打郑国的计划等.
+      晚年及学术传承
+      晚年经历：据钱穆考证，墨子后来逝世于鲁阳 。楚惠王五十年，即公元前 439 年，墨子曾再次游楚，献书楚惠王，但楚惠王以其年老而不用其书.
+      学术传承：墨子死后，墨家分为相里氏之墨、相夫氏之墨、邓陵氏之墨三个学派，其弟子根据墨子生平事迹的史料，收集其语录，编成了《墨子》一书，使墨家思想得以传承.</p>
+  </div>
+
+  <div style="
+background-color: #224d4d;
+text-align: center;
+padding: 40px;
+font-size: 12px;
+">
+    <p>wyx的網站 @mozi</p>
+    <a href="https://www.acfun.cn/v/ac24519842" style="
+text-decoration: none;
+ color: #ba0000 ;
+ ">=請勿點擊=</a>
+  </div>
+</body>
+
+</html>
